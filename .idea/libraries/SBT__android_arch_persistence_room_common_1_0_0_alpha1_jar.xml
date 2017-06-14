@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: android.arch.persistence.room:common:1.0.0-alpha1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/android.arch.persistence.room/common/jars/common-1.0.0-alpha1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/android.arch.persistence.room/common/srcs/common-1.0.0-alpha1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
