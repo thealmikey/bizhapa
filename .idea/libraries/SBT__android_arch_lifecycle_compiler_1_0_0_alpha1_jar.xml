@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SBT: android.arch.lifecycle:compiler:1.0.0-alpha1:jar">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/android.arch.lifecycle/compiler/jars/compiler-1.0.0-alpha1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

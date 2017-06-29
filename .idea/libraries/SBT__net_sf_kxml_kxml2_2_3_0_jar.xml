@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: net.sf.kxml:kxml2:2.3.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.kxml/kxml2/jars/kxml2-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.kxml/kxml2/srcs/kxml2-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

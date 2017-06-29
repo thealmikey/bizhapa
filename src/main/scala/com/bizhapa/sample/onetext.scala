@@ -1,14 +1,12 @@
 package com.bizhapa.sample
 
-import android.arch.persistence.room.{Entity, PrimaryKey}
+import android.arch.persistence.room.{ PrimaryKey}
+import com.lucidchart.room.entity.RoomEntity
 
 import scala.beans.BeanProperty
 
 /**
   * Created by almikey on 13/06/17.
   */
-@Entity
-class OnetextModel {
-@PrimaryKey
-  @BeanProperty var theText:String = _
-}
+@RoomEntity
+case class OnetextModel (@PrimaryKey theText:String)

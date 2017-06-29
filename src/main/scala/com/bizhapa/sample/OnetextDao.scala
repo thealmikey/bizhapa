@@ -3,6 +3,7 @@ package com.bizhapa.sample
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.{Dao, Insert, Query}
 
+
 /**
   * Created by almikey on 13/06/17.
   */

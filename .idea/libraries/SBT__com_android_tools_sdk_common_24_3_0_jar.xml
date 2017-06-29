@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.android.tools:sdk-common:24.3.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.android.tools/sdk-common/jars/sdk-common-24.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.android.tools/sdk-common/srcs/sdk-common-24.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

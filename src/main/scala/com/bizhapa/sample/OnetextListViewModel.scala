@@ -19,9 +19,9 @@ object OnetextListViewModel{
     }
   }
 }
-class OnetextListViewModel(application: Application) extends AndroidViewModel(application){
+class OnetextListViewModel(application: Application,var db:AppDatabase) extends AndroidViewModel(application){
 
-  var appDatabase:AppDatabase = AppDatabase.getDatabase(this.application)
+  var appDatabase:AppDatabase = db
 
   @BeanProperty
   val oneTextList:LiveData[List[OnetextModel]] = appDatabase.theTextModel().getAllTexts()
