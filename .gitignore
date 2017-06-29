@@ -3,3 +3,9 @@ project/project
 bin/
 local.properties
 proguard-sbt.txt
+.idea/
+.lint
+.history
+proguard/
+projectFilesBackup/
+.gitignore
