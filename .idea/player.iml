@@ -44,17 +44,6 @@
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="com.android.support-multidex-1.0.0" exported="" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: org.xerial:sqlite-jdbc:3.16.1:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: org.jetbrains.kotlin:kotlin-stdlib:1.1.1:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: org.jetbrains:annotations:13.0:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: org.antlr:antlr4:4.5.3:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: commons-codec:commons-codec:1.10:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: com.squareup:javapoet:1.8.0:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.guava:guava:18.0:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.code.gson:gson:2.8.0:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.auto:auto-common:0.6:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: android.arch.persistence.room:migration:1.0.0-alpha3:jar" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="SBT: android.arch.persistence.room:compiler:1.0.0-alpha3:jar" level="project" />
     <orderEntry type="library" name="SBT: com.lucidchart:android-room_2.11:0-SNAPSHOT:jar" level="project" />
     <orderEntry type="module-library">
       <library name="SBT: unmanaged-jars">
@@ -115,5 +104,16 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="SBT: android.arch.persistence.room:compiler:1.0.0-alpha3:jar" level="project" />
+    <orderEntry type="library" name="SBT: android.arch.persistence.room:migration:1.0.0-alpha3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.auto:auto-common:0.6:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.code.gson:gson:2.8.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.google.guava:guava:18.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.squareup:javapoet:1.8.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.10:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.antlr:antlr4:4.5.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.jetbrains:annotations:13.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.jetbrains.kotlin:kotlin-stdlib:1.1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.xerial:sqlite-jdbc:3.16.1:jar" level="project" />
   </component>
 </module>

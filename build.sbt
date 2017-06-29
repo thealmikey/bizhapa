@@ -21,9 +21,9 @@ libraryDependencies += "com.android.support" % "recyclerview-v7" %"25.0.0"
 
 
 
-useProguard := false
+useProguard := true
 
-proguardScala := false
+proguardScala := true
 
 javaOptions in Compile := Seq("-Xmx2G")
 
@@ -35,6 +35,11 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
 
+//for Room database
+libraryDependencies += "android.arch.persistence.room" % "runtime" % "1.0.0-alpha3"
+
+libraryDependencies += "android.arch.persistence.room" % "compiler" % "1.0.0-alpha3"
+
 libraryDependencies += "com.android.support" % "multidex" % "1.0.0"
 
 libraryDependencies += "com.lucidchart" %% "android-room" % "0-SNAPSHOT"
@@ -42,18 +47,18 @@ addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.fu
 
 proguardOptions ++= Seq("-keepclasseswithmembernames class android.arch.room.** { *; }")
 
-dexMulti := true
+dexMulti := false
 
 dexMaxHeap := "4g"
-
-dexMainClasses := Seq(
-     "android/support/multidex/BuildConfig.class",
-   "android/support/multidex/MultiDex$V14.class",
-   "android/support/multidex/MultiDex$V19.class",
-   "android/support/multidex/MultiDex$V4.class",
-   "android/support/multidex/MultiDex.class",
-  "android/support/multidex/MultiDexApplication.class",
-   "android/support/multidex/MultiDexExtractor$1.class",
-  "android/support/multidex/MultiDexExtractor.class",
-  "android/support/multidex/ZipUtil$CentralDirectory.class",
-   "android/support/multidex/ZipUtil.class")
+//
+//dexMainClasses := Seq(
+//     "android/support/multidex/BuildConfig.class",
+//   "android/support/multidex/MultiDex$V14.class",
+//   "android/support/multidex/MultiDex$V19.class",
+//   "android/support/multidex/MultiDex$V4.class",
+//   "android/support/multidex/MultiDex.class",
+//  "android/support/multidex/MultiDexApplication.class",
+//   "android/support/multidex/MultiDexExtractor$1.class",
+//  "android/support/multidex/MultiDexExtractor.class",
+//  "android/support/multidex/ZipUtil$CentralDirectory.class",
+//   "android/support/multidex/ZipUtil.class")
