@@ -1,5 +1,7 @@
 package com.bizhapa.sample
 
+import java.util
+
 import android.app.Activity
 import android.arch.lifecycle._
 import android.arch.persistence.room.Room
@@ -7,8 +9,8 @@ import android.content.Context
 import android.os.Bundle
 import android.view.{LayoutInflater, View, ViewGroup}
 import android.widget.{Button, EditText, TextView}
-import com.bizhapa.sample.OnetextListViewModel.addTextAsync
 import android.support.v7.widget.{LinearLayoutManager, RecyclerView}
+import java.util.List
 
 class MainActivity extends Activity with LifecycleRegistryOwner {
 
@@ -39,12 +41,13 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
       theButton = findViewById(R.id.myAddButton).asInstanceOf[Button]
 
       theRecyclerView.setLayoutManager(new LinearLayoutManager(this))
-      recyclerViewAdapter = new MyAdapter(List.empty[OnetextModel])
+    var emptyL = Array[OnetextModel]()
+      recyclerViewAdapter = new MyAdapter(emptyL)
       theRecyclerView.setAdapter(recyclerViewAdapter)
 
       var myViewModel = new OnetextListViewModel(this.getApplication, db)
-      myViewModel.getOneTextList.observe(this, new Observer[List[OnetextModel]] {
-        override def onChanged(t: List[OnetextModel]): Unit = {
+      myViewModel.getOneTextList.observe(this, new Observer[Array[OnetextModel]] {
+        override def onChanged(t: Array[OnetextModel]): Unit = {
           var otherAdapter = new MyAdapter(t)
           theRecyclerView.setAdapter(otherAdapter)
           theRecyclerView.getAdapter.notifyDataSetChanged()
@@ -55,7 +58,12 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
         override def onClick(v: View): Unit = {
           var theTexty = theEditBox.getText.toString
           var aModel =new OnetextModel(theTexty)
-          new addTextAsync(db).execute(aModel)
+          new Thread(new Runnable {
+            override def run(): Unit = {
+              db.theTextModel().addText(aModel)
+            }
+          }).start()
+
         }
       })
 
@@ -66,7 +74,8 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
       var theTextView = view.findViewById(R.id.oneText).asInstanceOf[TextView]
     }
 
-    class MyAdapter(var oneTextList: List[OnetextModel]) extends RecyclerView.Adapter[MyViewHolder] {
+    class MyAdapter(var oneTextList:Array[OnetextModel]) extends RecyclerView.Adapter[MyViewHolder] {
+
 
       override def getItemCount: Int = oneTextList.size
 
@@ -79,7 +88,7 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
         holder.theTextView.setText(oneItemModel.theText)
       }
 
-      def addItems(oneTextList: List[OnetextModel]) = {
+      def addItems(oneTextList: Array[OnetextModel]) = {
         this.oneTextList = oneTextList
         notifyDataSetChanged()
       }
