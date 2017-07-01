@@ -5,7 +5,6 @@ import java.util
 import android.app.Activity
 import android.arch.lifecycle._
 import android.arch.persistence.room.Room
-import android.content.Context
 import android.os.Bundle
 import android.view.{LayoutInflater, View, ViewGroup}
 import android.widget.{Button, EditText, TextView}
@@ -19,7 +18,6 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
   var theEditBox: EditText = _
   var theButton: Button = _
 
-  import android.arch.lifecycle.LifecycleRegistry
 
   import android.arch.lifecycle.LifecycleRegistry
 
@@ -29,10 +27,6 @@ class MainActivity extends Activity with LifecycleRegistryOwner {
   override def onCreate(savedInstanceState: Bundle): Unit = {
     super.onCreate(savedInstanceState)
     this.setContentView(R.layout.the_main)
-
-
-
-
 
      lazy val db:AppDatabase = Room.databaseBuilder(getApplicationContext, classOf[AppDatabase], "onetext_db").build()
 

@@ -19,8 +19,6 @@ scalacOptions ++= Seq("-feature", "-Xexperimental" ,"-language:implicitConversio
 libraryDependencies += "com.android.support" % "recyclerview-v7" %"25.0.0"
 
 
-
-
 useProguard := true
 
 proguardScala := true
@@ -35,21 +33,29 @@ libraryDependencies ++= Seq(
 
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
 
-//for Room database
-libraryDependencies += "android.arch.persistence.room" % "runtime" % "1.0.0-alpha3"
-
-libraryDependencies += "android.arch.persistence.room" % "compiler" % "1.0.0-alpha3"
-
 libraryDependencies += "com.android.support" % "multidex" % "1.0.0"
 
 libraryDependencies += "com.lucidchart" %% "android-room" % "0-SNAPSHOT"
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
 
-proguardOptions ++= Seq("-keepclasseswithmembernames class android.arch.room.** { *; }")
 
 dexMulti := false
 
-dexMaxHeap := "4g"
+proguardOptions ++= Seq(
+  "-keepclassmembers class * implements android.arch.lifecycle.LifecycleObserver {" +
+    "    <init>(...);" +
+    "}",
+  "-keepclassmember class **{ @android.arch.lifecycle.OnLifecycleEvent public *; }",
+  "-keepclassmembers class * extends android.arch.lifecycle.ViewModel {" +
+    "<init>(...);" +
+    "}",
+  "-keepclassmembers class android.arch.lifecycle.Lifecycle$State { *; }",
+  "-keepclassmembers class android.arch.lifecycle.Lifecycle$Event { *; }",
+  "-keepclassmembers class * {" +
+    " @android.arch.lifecycle.OnLifecycleEvent *;" +
+    "}"
+)
+
 //
 //dexMainClasses := Seq(
 //     "android/support/multidex/BuildConfig.class",

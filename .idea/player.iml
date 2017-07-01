@@ -5,7 +5,7 @@
       <configuration>
         <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../target/android/generated/source" />
         <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../target/android/generated/source" />
-        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../target/android/intermediates/manifest/AndroidManifest.xml" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/../src/main/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../src/main/assets" />
         <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../src/main/libs" />
@@ -13,7 +13,7 @@
         <option name="RUN_PROGUARD" value="true" />
         <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../proguard_logs" />
         <proGuardCfgFiles>
-          <file>$MODULE_DIR$/proguard-sbt.txt</file>
+          <file>file://$MODULE_DIR$/proguard-sbt.txt</file>
         </proGuardCfgFiles>
         <option name="UPDATE_PROPERTY_FILES" value="false" />
       </configuration>
@@ -104,16 +104,16 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="SBT: android.arch.persistence.room:compiler:1.0.0-alpha3:jar" level="project" />
-    <orderEntry type="library" name="SBT: android.arch.persistence.room:migration:1.0.0-alpha3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.google.auto:auto-common:0.6:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.google.code.gson:gson:2.8.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.google.guava:guava:18.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.squareup:javapoet:1.8.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.10:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.antlr:antlr4:4.5.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.jetbrains:annotations:13.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.jetbrains.kotlin:kotlin-stdlib:1.1.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.xerial:sqlite-jdbc:3.16.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: android.arch.persistence.room:compiler:1.0.0-alpha3:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: android.arch.persistence.room:migration:1.0.0-alpha3:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.auto:auto-common:0.6:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.code.gson:gson:2.8.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: com.google.guava:guava:18.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: com.squareup:javapoet:1.8.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: commons-codec:commons-codec:1.10:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: org.antlr:antlr4:4.5.3:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: org.jetbrains:annotations:13.0:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: org.jetbrains.kotlin:kotlin-stdlib:1.1.1:jar" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="SBT: org.xerial:sqlite-jdbc:3.16.1:jar" level="project" />
   </component>
 </module>

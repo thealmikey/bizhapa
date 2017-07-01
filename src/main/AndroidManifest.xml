@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.bizhapa.sample">
     <uses-sdk android:minSdkVersion="16"></uses-sdk>
-    <application
-            android:name="android.support.multidex.MultiDexApplication" >
+    <application>
         <activity android:name=".MainActivity"
                    android:label="on the dex">
             <intent-filter>
